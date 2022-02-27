@@ -142,6 +142,12 @@ local function goToEmptyInventory()
     local prevPos = vector.new(pos.x, pos.y, pos.z)
     local prevDirForward = vector.new(dirForward.x, dirForward.y, dirForward.z)
     
+    local num = 0
+    while num <= 1 do
+        tryUp()
+        num = num + 1
+    end
+
     goToPos(home.x, home.y, home.z)
     faceX(-1)
     
